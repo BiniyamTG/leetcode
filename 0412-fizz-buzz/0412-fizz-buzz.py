@@ -1,12 +1,16 @@
 class Solution:
-    def fizzBuzz(self, n: int) -> List[str]:
-        new=[]
-        if (n%3==0 and n%5!=0):
-            return "Fizz"
-        elif(n%5==0 and n%3!=0):
-            return "Buzz"
-        elif(n%5==0 and n%3==0):
-            return "FizzBuzz"
-        else:
-            return n
+    def fizzBuzz(self, num: int) -> List[str]:
+        store=[]
+        for i in range(1,num+1):
+            if i%3==0 and i%5==0:
+                store.append("FizzBuzz")
+            elif i%3==0:
+                store.append("Fizz")
+            elif i%5==0:
+                store.append("Buzz")
+            else:
+                store.append(str(i))
+        return store
+
+      
         
